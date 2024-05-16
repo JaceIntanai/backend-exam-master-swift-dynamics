@@ -15,17 +15,23 @@ output = 1
 input = -10
 output = number can not be negative
 """
-import math
+# import math
 
 class Solution:
+
+    def factorial(self, n: int) -> int:
+        if n == 0:
+            return 1
+        else:
+            return n * self.factorial(n - 1)
 
     def find_tailing_zeroes(self, number: int) -> int | str:
         if number < 0:
             return "number can not be negative"
         
-        number_factorial = str(math.factorial(number))
+        number_factorial = str(self.factorial(number))
         trailing_zeros_counts = len(number_factorial) - len(number_factorial.rstrip('0'))
         return trailing_zeros_counts
     
 solution = Solution()
-print(solution.find_tailing_zeroes(0))
+print(solution.find_tailing_zeroes(1))
