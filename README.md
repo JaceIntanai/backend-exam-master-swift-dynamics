@@ -7,7 +7,7 @@ cd 1_find_tailing_zero/
 python main.py
 ```
 ### Explain
-> find_tailing_zeroes of number factorial. The method used is calculate the numbers using factorial function, then find the number of factorial numbers obtained, and then use rstrip function to remove the last 0's. Then take the number of factorial number at the beginning and subtract the number of factorial number after subtracting 0 to get the number of last 0 numbers.
+> Find tailing zeroes of number factorial. The method used to calculate the numbers using the factorial function, then find the number of factorial numbers obtained, and then use the rstrip function to remove the last 0's. Then take the number of factorial numbers at the beginning and subtract the number of factorial numbers after subtracting 0 to get the number of last 0 numbers.
 
 ## Question 2 index of max
 ### Run
@@ -16,16 +16,16 @@ cd 2_index_of_max/
 python main.py
 ```
 ### Explain
-> index_of_max. The method is find maximum number in list by max function and then find index of maximum number by index function in list
+> The method is to find the maximum number in the list by max function and then find an index of the maximum number by index function in the list.
 
-## Question3: number to thai
+## Question 3 number to thai
 ### Run
 ```bash
 cd 3_number_to_thai/
 python main.py
 ```
 ### Explain
-> number to thai. The method is check digit from back to front check position and digit_str to predict numerals and unit in thai numbers have 3 problem are _1, 1_, 2_ in these cases i check and turn to fig thai number
+> The method is to check digits from back to the front and check the position and digit_str to predict numerals and units in thai numbers have 3 problems are _1, 1_, 2_ in these cases I check and turn to fig thai number
 
 ## Question 4 number to roman
 ### Run
@@ -34,7 +34,7 @@ cd 4_number_to_roman/
 python main.py
 ```
 ### Explain
-> number to roman. The method is fig roman numerals and number units to keep character and use division as a measure of which number units to use in the calculation by selecting the number unit from largest to lowest. After dividing, take the obtained values ​​to determine how many of these characters will be used, going until they are complete. The numbers that can be achieved are 1-3999 because from 4000 onwards special roman numerals characters will be used.
+> The method is to fix roman numerals and number units to keep the character and use division as a measure of which number units to use in the calculation by selecting the number unit from largest to lowest. After dividing, take the obtained values ​​to determine how many of these characters will be used, going until they are complete. The numbers that can be achieved are 1-3999 because from 4000 onwards special roman numerals characters will be used.
 
 ## Question 5 rest api
 ### Run
@@ -124,4 +124,4 @@ Student
  -- update or replace an existing resource identified by   student id
  - DELETE: http://localhost:8000/api/v1/students/<id>/
  -- delete student by id
-```
+```Shows the process request status as in processing or completed.
