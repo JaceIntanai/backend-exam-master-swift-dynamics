@@ -7,7 +7,7 @@ cd 1_find_tailing_zero/
 python main.py
 ```
 ### Explain
-> Find tailing zeroes of number factorial. The method used to calculate the numbers using the factorial function, then find the number of factorial numbers obtained, and then use the rstrip function to remove the last 0's. Then take the number of factorial numbers at the beginning and subtract the number of factorial numbers after subtracting 0 to get the number of last 0 numbers.
+> The method used to calculate the numbers using the factorial function, then find the number of factorial numbers obtained, and then use the rstrip function to remove the last 0's. Then take the number of factorial numbers at the beginning and subtract the number of factorial numbers after subtracting 0 to get the number of last 0 numbers.
 
 ## Question 2 index of max
 ### Run
