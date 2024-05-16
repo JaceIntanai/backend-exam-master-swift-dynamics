@@ -1,6 +1,6 @@
 from rest_framework import viewsets, filters
 from rest_framework.response import Response
-from ...models import Teacher, Classroom
+from ...models import Teacher, School
 from ...serializers import TeacherSerializer, ClassroomSerializer
 from ...filters import TeacherFilter
 
@@ -20,6 +20,10 @@ class TeacherViewSet(viewsets.ModelViewSet):
             classroom_serializer = ClassroomSerializer(classrooms, many=True)
 
             teachers_info['classrooms'] = classroom_serializer.data
+            for teacher_obj_data in teachers_info['classrooms']:
+                school_id = teacher_obj_data['school']
+                school_name = School.objects.get(id=school_id).name
+                teacher_obj_data['school_name'] = school_name
             data.append(teachers_info)
 
         return Response(data)
@@ -34,5 +38,9 @@ class TeacherViewSet(viewsets.ModelViewSet):
         classroom_serializer = ClassroomSerializer(classrooms, many=True)
 
         data['classrooms'] = classroom_serializer.data
+        for teacher_obj_data in data['classrooms']:
+                school_id = teacher_obj_data['school']
+                school_name = School.objects.get(id=school_id).name
+                teacher_obj_data['school_name'] = school_name
 
         return Response(data)

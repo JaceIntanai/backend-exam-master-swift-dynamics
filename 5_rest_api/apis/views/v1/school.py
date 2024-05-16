@@ -15,16 +15,16 @@ class SchoolViewSet(viewsets.ModelViewSet):
 
         data = []
         for i, school_obj in enumerate(queryset):
-            school_data = serializer.data[i]
+            school_info = serializer.data[i]
             classrooms_count = school_obj.classrooms.count()
             teachers_count = Teacher.objects.filter(classrooms__school=school_obj).distinct().count()
             students_count = Student.objects.filter(classroom__school=school_obj).count()
-            school_data.update({
+            school_info.update({
                 'classrooms_count': classrooms_count,
                 'teachers_count': teachers_count,
                 'students_count': students_count,
             })
-            data.append(school_data)
+            data.append(school_info)
 
         return Response(data)
     
